@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 /// Using [ShadowDegree] with values [ShadowDegree.dark] or [ShadowDegree.light]
 /// to get a darker version of the used color.
 /// [duration] in milliseconds
+/// [borderRadius] is ignored if [shape] is [BoxShape.circle]
 ///
 class AnimatedButton extends StatefulWidget {
   final GestureTapCallback onPressed;
@@ -16,6 +17,7 @@ class AnimatedButton extends StatefulWidget {
   final ShadowDegree shadowDegree;
   final int duration;
   final BoxShape shape;
+  final double borderRadius;
 
   const AnimatedButton(
       {Key? key,
@@ -27,7 +29,8 @@ class AnimatedButton extends StatefulWidget {
         this.shadowDegree = ShadowDegree.light,
         this.width = 200,
         this.duration = 70,
-        this.shape = BoxShape.rectangle})
+        this.shape = BoxShape.rectangle,
+        this.borderRadius = 16})
       : assert(child != null),
         super(key: key);
 
@@ -64,7 +67,7 @@ class _AnimatedButtonState extends State<AnimatedButton> {
                         : darken(Colors.grey, widget.shadowDegree),
                     borderRadius: widget.shape != BoxShape.circle
                         ? BorderRadius.all(
-                      Radius.circular(16),
+                      Radius.circular(widget.borderRadius),
                     )
                         : null,
                     shape: widget.shape),
@@ -81,7 +84,7 @@ class _AnimatedButtonState extends State<AnimatedButton> {
                     color: widget.enabled ? widget.color : Colors.grey,
                     borderRadius: widget.shape != BoxShape.circle
                         ? BorderRadius.all(
-                      Radius.circular(16),
+                      Radius.circular(widget.borderRadius),
                     )
                         : null,
                     shape: widget.shape),
@@ -108,10 +111,14 @@ class _AnimatedButtonState extends State<AnimatedButton> {
   void _unPressedOnTapUp(_) => _unPressed();
 
   void _unPressed() {
-    setState(() {
-      _position = 4;
+    Future.delayed(const Duration(milliseconds: 120), () {
+      setState(() {
+        _position = 4;
+      });
+      Future.delayed(const Duration(milliseconds: 200), () {
+        widget.onPressed();
+      });
     });
-    widget.onPressed();
   }
 }
 
