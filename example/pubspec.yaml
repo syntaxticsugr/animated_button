@@ -14,12 +14,12 @@ description: An example for Animated Button Widget.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  animated_button:
+  animated_button_mod:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,4 +1,4 @@
-import 'package:animated_button/animated_button.dart';
+import 'package:flutter_animated_button_mod/flutter_animated_button_mod.dart';
 import 'package:flutter/material.dart';
 import 'package:example/page.dart';
 
@@ -28,6 +28,8 @@ class Demo extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 20),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Text(
                 'Simple button',
                 style: TextStyle(
@@ -42,6 +44,8 @@ class Demo extends StatelessWidget {
               shadowDegree: ShadowDegree.light,
             ),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Text(
                 'Slow animation',
                 style: TextStyle(
@@ -59,6 +63,8 @@ class Demo extends StatelessWidget {
             SizedBox(height: 20),
             SizedBox(height: 20),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Text(
                 'Simple button',
                 style: TextStyle(
@@ -73,6 +79,8 @@ class Demo extends StatelessWidget {
               shadowDegree: ShadowDegree.light,
             ),
             AnimatedButton(
+              height: 64,
+              width: 300,
               child: Text(
                 'Navigate to another page',
                 style: TextStyle(
@@ -85,12 +93,13 @@ class Demo extends StatelessWidget {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => AnotherPage()));
               },
-              width: 300,
               color: Colors.redAccent,
               shadowDegree: ShadowDegree.dark,
               enabled: true,
             ),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Text(
                 'I\'m disabled',
                 style: TextStyle(
@@ -107,6 +116,8 @@ class Demo extends StatelessWidget {
               enabled: false,
             ),
             AnimatedButton(
+              height: 40,
+              width: 200,
               child: Text(
                 'Custom height',
                 style: TextStyle(
@@ -116,11 +127,12 @@ class Demo extends StatelessWidget {
                 ),
               ),
               onPressed: () {},
-              height: 40,
               shadowDegree: ShadowDegree.dark,
               color: Colors.indigo,
             ),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -147,6 +159,8 @@ class Demo extends StatelessWidget {
               color: Colors.green,
             ),
             AnimatedButton(
+              height: 64,
+              width: 200,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -173,7 +187,7 @@ class Demo extends StatelessWidget {
               ),
               onPressed: () {},
               shadowDegree: ShadowDegree.light,
-              color: Colors.amber[400],
+              color: Colors.amber[400]!,
             ),
             SizedBox(height: 20),
           ],

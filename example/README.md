@@ -1,6 +1,7 @@
 # Example
 Here is a small example for Animated Button Widget.
 
+</br>
 
 ## Getting Started
 

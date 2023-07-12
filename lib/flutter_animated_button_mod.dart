@@ -1,4 +1,4 @@
-library animated_button;
+library flutter_animated_button_mod;
 
 import 'package:flutter/material.dart';
 
@@ -25,14 +25,13 @@ class AnimatedButton extends StatefulWidget {
         required this.child,
         this.enabled = true,
         this.color = Colors.blue,
-        this.height = 64,
+        required this.height,
         this.shadowDegree = ShadowDegree.light,
-        this.width = 200,
+        required this.width,
         this.duration = 70,
         this.shape = BoxShape.rectangle,
         this.borderRadius = 16})
-      : assert(child != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   _AnimatedButtonState createState() => _AnimatedButtonState();

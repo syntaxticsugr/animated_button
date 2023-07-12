@@ -1,18 +1,18 @@
-# Animated Button
+# Flutter Animated Button MOD
 
-A very simple and customizable animated button.
+A very simple and customizable Animated Button.
 Providing simple animation, and many customizable attributes such height, width, child, ... etc.
 
+</br>
 
-## Getting Started
+![](example.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](giphy.gif)
 
-Nothing difficult here, yet!
-
-![](giphy.gif) ![](example.png)
+</br>
 
 ## Simple Example
+
 ```dart
-import 'package:animated_button/animated_button.dart';
+import 'package:flutter_animated_button_mod/flutter_animated_button_mod.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -52,6 +52,8 @@ class Demo extends StatelessWidget {
 }
 ```
 
+</br>
+
 ## Button attributes
 
 ```dart
@@ -68,10 +70,13 @@ AnimatedButton(
   shadowDegree: ShadowDegree.dark,
   color: Colors.blue,
 )
-
 ```
 
+</br>
+
 ### For more examples, check example folder
+
+</br>
 
 ## License
 MIT License.
